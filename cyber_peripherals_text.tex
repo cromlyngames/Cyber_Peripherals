@@ -1,0 +1,285 @@
+\documentclass{tufte-book}
+
+\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+
+%%
+% Book metadata
+\title{Cyber Peripherals\thanks{Hamish, Lumpley, Avery and the RPGtalk slackers }}
+\author[Cromlyn Games]{Cromlyn Games}
+\publisher{Publisher of This Book}
+
+%%
+% If they're installed, use Bergamo and Chantilly from www.fontsite.com.
+% They're clones of Bembo and Gill Sans, respectively.
+%\IfFileExists{bergamo.sty}{\usepackage[osf]{bergamo}}{}% Bembo
+%\IfFileExists{chantill.sty}{\usepackage{chantill}}{}% Gill Sans
+
+%\usepackage{microtype}
+
+%%
+% Just some sample text
+\usepackage{lipsum}
+
+%for fancy lists
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+\newcommand{\mylist}{\tikz[overlay]\draw(-.2,-.2)--(-.2,.4) [path fading=east](-.2,.15)--(.1,.15);} %adds the |- shape to the start of each list item
+\newcommand{\mylistend}{\tikz[overlay]\draw(-.2,.15)--(-.2,.4) [path fading=east](-.2,.15)--(.1,.15);} %adds the |- shape to the start of each list item
+\newcommand{\myitem}{\item[\mylist]} %defines the scope of the mylist command to be 2nd level sublists
+\newcommand{\myitemend}{\item[\mylistend]} %defines the scope of the mylist command to be 2nd level sublists
+%\renewcommand\labelitemi{---}  % turns bullets into long dashes
+
+%%
+% For nicely typeset tabular material
+\usepackage{booktabs}
+
+%%
+% For graphics / images
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+%%
+% Prints argument within hanging parentheses (i.e., parentheses that take
+% up no horizontal space).  Useful in tabular environments.
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
+
+%%
+% Prints an asterisk that takes up no horizontal space.
+% Useful in tabular environments.
+\newcommand{\hangstar}{\makebox[0pt][l]{*}}
+
+%%
+% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or
+  December\fi\space\number\year
+}
+
+
+% Prints an epigraph and speaker in sans serif, all-caps type.
+\newcommand{\openepigraph}[2]{%
+  %\sffamily\fontsize{14}{16}\selectfont
+  \begin{fullwidth}
+  \sffamily\large
+  \begin{doublespace}
+  \noindent\allcaps{#1}\\% epigraph
+  \noindent\allcaps{#2}% author
+  \end{doublespace}
+  \end{fullwidth}
+}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+\usepackage{units}
+
+% Typesets the font size, leading, and measure in the form of 10/12x26 pc.
+\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}}
+
+% Macros for typesetting the documentation
+
+% Generates the index
+\usepackage{imakeidx}
+%\makeindex[name=moves, title={Index of moves}] % on reflection, not needed. 
+\makeindex[name=stuff, title ={Index of elements, items}]
+\makeindex % general index for playbooks and stuff
+
+\begin{document}
+
+% Front matter
+\frontmatter
+
+% r.1 blank page
+\blankpage
+
+% v.2 epigraphs
+\newpage\thispagestyle{empty}
+
+\openepigraph{%
+Acknowledge up front that the PCs are going to win, and never sweat it. Then use the dice to escalate, escalate, escalate. We all know the PCs are going to win. What will it cost them?
+}{Lumpley}
+\vfill
+
+\openepigraph{%
+A designer knows that he has achieved perfection 
+not when there is nothing left to add, 
+but when there is nothing left to take away.
+}{Antoine de Saint-Exup\'{e}ry}
+\vfill
+\openepigraph{%
+The integrity of its span was rigorous as the modern program itself, yet around this had grown another reality, intent on its own agenda. This had occurred piecemeal, to no set plan, employing every imaginable technique and material. The result was something amorphous, startlingly organic.
+}{ William Gibson, Virtual Light}
+\vfill
+
+
+
+
+% r.3 full title page
+\maketitle
+
+
+% v.4 copyright page
+\newpage
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ \the\year\ \thanklessauthor
+
+\par\smallcaps{Published by \thanklesspublisher}
+
+\par\smallcaps{tufte-latex.github.io/tufte-latex/}
+
+\par Licensed under the Apache License, Version 2.0 (the ``License''); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at \url{http://www.apache.org/licenses/LICENSE-2.0}. Unless
+required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an \smallcaps{``AS IS'' BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND}, either eXpress or implied. See the
+License for the specific language governing permissions and limitations
+under the License.\index{license}
+
+\par\textit{First printing, \monthyear}
+\end{fullwidth}
+
+% r.5 contents
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+% r.7 dedication
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+\noindent\fontsize{18}{22}\selectfont\itshape
+\nohyphenation
+Dedicated to those who appreciate \LaTeX{} 
+and the work of \mbox{Edward R.~Tufte} 
+and \mbox{Donald E.~Knuth}.
+
+And to the horde of goblins who died defending them.
+\end{doublespace}
+\vfill
+\vfill
+
+
+% r.9 introduction
+\cleardoublepage
+\chapter*{Playing in Cyber\_Peripherals}
+\label{ch:playing in Cyber_Peripherals}
+
+%%
+% Start the main matter (normal chapters)
+\mainmatter
+
+\chapter{Basic Moves} \label{ch:basic moves}
+
+\chapter{Preparing to play} \label{ch:preparing to play}
+
+\section{install Sprawl drivers?} \label{sec: the sprawl}
+
+\chapter{Playbooks} \label{ch:playbooks}
+
+\section{Breaker} \label{sec: Breaker}
+
+\section{Goon} \label{sec:Goon}
+
+\section{Trader} \label{sec:Trader}
+
+\section{Prole} \label{sec:Prole}
+
+\section{Outcast} \label{sec:Outcast}
+
+\section{Veteran} \label{sec:Veteran}
+
+\section{NGOwned} \label{sec:NGOwned}
+
+\section{Waif} \label{sec:Waif}
+
+\section{Bonesaw} \label{sec:Bonesaw}
+
+\chapter{Cyberware} \label{ch:cyberware}
+\section{Cyberware List} \label{sec: Cyberware list}
+
+\chapter{Assets} 	\label{ch:assets}
+\section {Favours}	\label{sec:favours}
+\section {Cred} 	\label{sec:cred}
+\section {Gangs}	\label{sec: gangs}
+\section {Contacts}	\label{sec: contacts}
+
+\chapter{Advancement}	\label{ch: advancement}
+\chapter{The matrix}	\label{ch: the matrix}
+\chapter{Running Cyber\_Peripherals}	\label{ch:running the game}
+\section{agenda}			\label{sec: agenda}
+\section{always say}		\label{sec: always say}
+\section{principles}			\label{sec: principles}
+\section{moves}			\label{sec: moves}
+\section{inflicting harm}		\label{sec:inflicting harm}
+\section{countdown clocks}	\label{sec:countdown clocks}
+\section{corporations} 		\label{sec: corporations}
+\section{threats}			\label{sec: threats}
+\section{putting it all together} 	\label{sec: putting it all together}
+
+\chapter{the first session} \label{ch: the first session}
+
+%% ---   ---   ---   ---   ---   
+\chapter{Designer Notes}
+
+Rule 1 - No Exceptions\\
+Rule 2 - Needs to work for a one shot with strangers at a conference\\
+Rule 3 - Evoke, not mimic, the sprawl and cyberpunk\\
+Rule 4 - Support the GM\\
+Rule 5 - Every mechanical part needs to justify its existence\\
+Rule 6 - Every move needs to relate back to theme or the mechanics\\
+Rule 7 - No stat substitution moves\\
+
+on Playbooks\\
+a) Does this playbook have a niche. Is it overshadowed?\\
+b) Is the playbook fun and coherent?\\
+c) Does the playbook offer levers for the GM to pull?\\
+d) Does the playbook offer a second, different way to play that character?\\
+
+On Moves\\
+i) Is the trigger only going to trigger when it is important?\\
+ii) does a miss move the sotry forward with something interesting?\\
+iii) Does a success?\\
+iv) \\
+
+Formatting:\\
+Only stats use digits. Hold is spent in one or twos not 1 or 2. Add explanation for hold or choice from list under the first option that uses it.\\
+All moves to use the same format of trigger, 10+, 7-9 then 6-\\
+
+
+%%
+% The back matter contains appendices, bibliographies, indices, glossaries, etc.
+
+
+
+
+
+
+
+\backmatter
+
+\bibliography{sample-handout}
+\bibliographystyle{plainnat}
+
+\printindex[stuff]
+
+\printindex
+
+\end{document}
+
