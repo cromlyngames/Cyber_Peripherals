@@ -290,6 +290,7 @@ You don't win a game like this, but if a player sets up their character to run a
 % Start the main matter (normal chapters)
 \mainmatter
 
+\include{_Story}
 \chapter{Basic Moves} \label{ch:basic moves}
 
 \subsection{Act under Pressure (cool)} \label{move: act under pressure}
@@ -526,8 +527,25 @@ There were two inspirations behind this game. I've spent enough time working in 
 
 So, the game. If you start with a Sprawl campaign, you've got a lot of the style choices, technologies, social problems ect already agreed. It makes sense for the same mega-corps to be present in the background, but makes much less sense for them to take a personal interest in the game. For that reason, the corporate clocks are not active by default. Stats are the same, and if a player wants to use an established NPC reasonable equipment that we've seen the NPC with should be included. If you want to play a Sprawl character in the periphery, use the "The Pro" playbook. You lose some moves because you're not on a mission, but you keep the stats, some moves, and some corporate interest. You get a hideaway, a mysterious reputation and the the ability to make worlds collide.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Playbooks} \label{ch:playbooks}
 
+Want to crosswire devices and contacts? Try the Breaker\\
+Want to bring mates and muscle? Try the Goon\\
+Want your own little store to own? Try the Trader\\
+Want to be a diploma from the school of life? Try the Prole\\
+Want to confront injustice head on? Try the Outcast\\
+Want to tie different stories together? Try the Veteran\\
+Want to explore the power of a mega-corp? Try the NGOwned\\
+Want to explore relationships without power? Try the Waif\\ 
+Want to terrify everyone else? Try the Bonesaw\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{BreakerStory}
 \section{Breaker} \label{sec: Breaker}
 
 You aren't a hacker. Cyberspace is for tourism, not to live in. But when someone comes to you with a cuffed phone, a tagged handbag or an implant that has locked following warranty expiration, you're the person who gives them back their stuff. For a values of theirs, and a value of gives. 
@@ -546,10 +564,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
-+&-&-&-&+&+\\
 \midrule
 2&0&0&-1&1&1\\
 1&1&-1&0&2&1\\
@@ -646,7 +663,8 @@ You've got an apprentice/partner/assistant of the opposite sex. At start of sess
 \end{itemize}
 \end{multicols}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{GoonStory}
 \section{Goon} \label{sec:Goon}
 
 Society is broken, and you know it. It's a thankless task, but you and your mates are fighting to make a better future, something that is bigger than any one of you. Know what else is bigger than an individual? Your gang. After all, if you are fighting for your little vision of the future, you're going to need to break a few eggs.
@@ -657,7 +675,7 @@ Choose as many as you need:
 \\ \smallcaps{eyes}: beady, cautious, hot-headed, polite, large, squinty
 \\ \smallcaps{face}:  seamed, pointed chin, loose, tattooed, muscular, weak chin
 \\ \smallcaps{body}: limp, hourglass, chunky, sleek, 
-\\ \smallcaps{skin}: dull, baby-soft, tattooed, mottled, creamy, Indian
+\\ \smallcaps{skin}: dull, baby-soft, tattooed, mottled, creamy, dark
 \\ \smallcaps{wraps}: flashy, ferocious, goatee, shaved, painted, tacky
 }
 
@@ -665,10 +683,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
--&-&-&+&+&-\\
 \midrule
 0&  0&  2& 1&1&-1\\
 0&  -1& 1& 2&1&0\\
@@ -748,7 +765,7 @@ When you and your gang reinforce your bond through ritual \smallcaps{roll+meat}
 
 %%%%%%%%%%%%%%%%%%%%
 
-
+\include{TraderStory}
 \section{Trader} \label{sec:Trader}
 
 Capitalism is dead, long live Corpocracy! Buy and trade and exchange favours, old as humanity and as hardwired as that market ticker aug in your left eyeball. Thing is, is the market is a monster. It eats profit and shits out marginal returns and the occasional payoff. Corporations don't like that, it's why the Zaibatsu's declare war on free trade. Well, you ain't about to take that from the Man. You'll buy and sell and provide storage and shipping points, just like your granddaddy cubed did on a junk sailing into Hoi An.
@@ -759,7 +776,7 @@ Choose as many as you need:
 \\ \smallcaps{eyes}: mild, languid, candid, moody, cool-headed, resigned
 \\ \smallcaps{face}: lined, pallid, Greek, flared, chalky
 \\ \smallcaps{body}: thin, comfy, pot-bellied, terrifying, luxuriant, bald
-\\ \smallcaps{skin}: Caucasian, wrinkled; neckbeard, delicate, supple, clipped, orange
+\\ \smallcaps{skin}: pale, wrinkled; neckbeard, delicate, supple, clipped, orange
 \\ \smallcaps{wraps}: symmetrical, ribbed, professional, knit, savvy, adorable
 }
 
@@ -767,10 +784,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
-+&+&+&-&-&-\\
 \midrule
 2&1&1&0&0&-1\\
 1&2&1&0&-1&0\\
@@ -864,7 +880,7 @@ When you deal with the corps at high stakes (for you) \smallcaps{mark xp}.
 
 %%%%%%%%%%%%%%%%%%%%
 
-
+\include{ProleStory}
 \section{Prole} \label{sec:Prole}
 
 Live to work or work to live? The problem is doing either steady. The gigeconomy favours the multiskilled, and while the meat is weak skillchips are available by the hour. For a fee. Screw that.
@@ -885,10 +901,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
-+&-&-&+&+&-\\
 \midrule
 2&0&0&1&1&-1\\
 1&0&-1&2&1&0\\
@@ -962,7 +977,7 @@ When you quit a job in disgust \smallcaps{mark xp.}
 
 %%%%%%%%%%%%%%%%%%%%
 
-
+\include{OutcastStory}
 \section{Outcast} \label{sec:Outcast}
 
 Everyone in the community is an outsider to the shiny world of the rich and corpocratic, but you and your ilk stand outside the community too. You may end up rich and even powerful, but you will never really be accepted. Don't take this playbook if you aren't comfortable with the consequences.
@@ -981,10 +996,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style 	& Edge & Cool & Meat & Synth & Mind\\
-- 	&- 	&+ 	&	+&	-&	+\\
 \midrule
 0&0&02&1&-1&1\\
 0&-1&1&2&0&1\\
@@ -1060,7 +1074,7 @@ When you, as a character, interact with an NPC and you, as a player, beckon at t
 
 %%%%%%%%%%%%%%%%%%%%
 
-
+\include{VeteranStory}
 \section{Veteran} \label{sec:Veteran}
 
 You are old. Old enough to have fought, before robots and gangers took that job too. You have been in the community a long time, and like anything that sits still long enough here, you play a supporting structural role in how the community works. Some people respect you. Most owe you. All you've got to do it keep it together.
@@ -1071,7 +1085,7 @@ Choose as many as you need:
 \\ \smallcaps{eyes}: wide-set, impulsive, logical, pleasing, calm, rheumy, steely
 \\ \smallcaps{face}: polished, velvety, jutting chin, impulsive, inconsiderate, jowly, thick
 \\ \smallcaps{body}: slicked down / slicked back, voluptuous, ringlets, flabby, limp, harrowing
-\\ \smallcaps{skin}: Italian, dead, dowdy, shaved, thick, straggly,
+\\ \smallcaps{skin}: tanned, dead, dowdy, shaved, thick, straggly,
 \\ \smallcaps{wraps}: zippered, stunning, gypsy, banded, translucent, racerback, rugged, stylish, innovative, fitted, state-of-the-art, spiritual
 }
 
@@ -1079,10 +1093,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
-+&-&-&-&+&+\\
 \midrule
 2&0&0&-1&1&1\\
 1&1&-1&0&2&1\\
@@ -1143,7 +1156,7 @@ When you get someone to the point of owing you three favours, \smallcaps{mark xp
 
 %%%%%%%%%%%%%%%%%%%%
 
-
+\include{NGOwnedStory}
 \section{NGOwned} \label{sec:NGOwned}
 
 You looked down from the spire at the heaving heaving jungle and heard a call. Maybe privelaleged guilt; youthful rebellion or an eye for an opportunity. Anyhow, you're here and you're going to help.
@@ -1162,10 +1175,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
-+&+&-&+&-&-\\
 \midrule
 2&1&0&1&0-1\\
 1&2&0&1&-1&0\\
@@ -1234,7 +1246,7 @@ When you and your gang promote your sponsor's interests directly, \smallcaps{mar
 
 %%%%%%%%%%%%%%%%%%%%
 
-
+\include{WaifStory}
 \section{Waif} \label{sec:Waif}
 
 Growing up sucks, but so does being a kid. You're relatively powerless, reliant on blunt-nose adults and still finding your way. At least tech is easy.
@@ -1245,7 +1257,7 @@ Choose as many as you need:
 \\ \smallcaps{eyes}: blunt, moody, cool-headed, jowly, tactful, rheumy
 \\ \smallcaps{face}: veined, florid, sharp cheekbones, drooping, bleary, translucent
 \\ \smallcaps{body}: bright, harrowing, compact, carved, sturdy, untamed
-\\ \smallcaps{skin}: peach, pitted, creamy, glowing, German, uneven
+\\ \smallcaps{skin}: peach, pitted, creamy, glowing, dark, uneven
 \\ \smallcaps{wraps}: standard-fit, on trend, latest, stunning, pressed, anatomic, bold, retro, easy-to-maintain, dependable, preppy, high-performance
 }
 
@@ -1253,10 +1265,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
--&+&+&-&-&+\\
 \midrule
 0&2&1&0&1&1\\
 0&1&2&-1&2&1\\
@@ -1286,7 +1297,7 @@ When you are out on the street and it kicks off \smallcaps{roll+edge}
 You're addicted to the net. Pay a credit a week or make other arrangements to keep your fast lane access. As long as you are online you can ask the GM for some random fact related to what you are thinking about.
 
 \subsection{F.R.I.E.N.D}
-You have an artificial protector, a gaurdian machine spirit or a battered toybot. It counts as a piece of chrome, activated by \smallcaps{rolling+synth} where it allows you to do something in the fiction.
+You have an artificial protector, a guardian machine spirit or a battered toybot. It counts as a piece of chrome, activated by \smallcaps{rolling+synth} where it allows you to do something in the fiction.
 Choose one: 
 	\begin{itemize}
 	\item Protective: can be used as a +1 Armour
@@ -1331,7 +1342,7 @@ When you steal something and consume it alone, you can ask the MC what sort of m
 %%%%%%%%%%%%%%%%%%%%
 
 
-
+\include{BonesawStory}
 \section{Bonesaw} \label{sec:Bonesaw}
 
 There's lots of reasons to be a Ripper Doc. Maybe you saved some drunk's life and got off on the thrill. Maybe your aunt instructed you in the secret rituals. Maybe you really like cybergear and you read the instruction manual real carefully. Anyhow, they give you creds to risk their lives. Ain't that cool?
@@ -1350,10 +1361,9 @@ Choose one row.
 \begin{table}[ht]
 \centering
 \fontfamily{ppl}\selectfont
-\begin{tabular}{llllll}
+\begin{tabular}{rrrrrr}
 \toprule
 Style & Edge & Cool & Meat & Synth & Mind\\
--&+&-&-&+&+\\
 \midrule
 0&2&0&-1&1&1\\
 0&1&-1&0&2&1\\
@@ -1364,6 +1374,7 @@ Style & Edge & Cool & Meat & Synth & Mind\\
 
 %%%%%%%%%%%%%%%%%%%%
 
+\include{TheProStory}
 \section{The Pro} \label{sec:The Pro}
 You lose some moves because you're not on a mission, but you keep the stats, some moves, and some corporate interest. You get a hideaway, a mysterious reputation and the the ability to make worlds collide.
 
